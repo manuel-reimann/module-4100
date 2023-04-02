@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hundeschule Reimann</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="material/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+  <!-- favicon definitions start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="material/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="material/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="material/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="material/favicon_io/site.webmanifest">
+  <!-- favicon definitions end -->
+</head>
+
+<body>
+
+  <!--   navigation start-->
+  <header>
+    <nav>
+      <ul>
+        <li id="customer-logo"><img src="material/img/logo/hundeschule-reimann-logo.svg"
+            alt="Black Logo Silhouette of Dog juming into Lap of Human"></li>
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="kurse.html" title="Kurse">Kurse</a></li>
+        <li><a href="about.html" title="Kontakt">Kontakt</a></li>
+
+        <li class="language">
+          <span>
+            DE | <a href="#">&nbsp;ENG</a>
+          </span>
+        </li>
+        <li>
+          <div class="userprofile"></div>
+          <p>Amanda Gonzales</p>
+        </li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+  <!--   navigation end-->
+
+
+
+  <!--   course section start-->
+  <section class="welpen-section">
+
+    <a href="kurse.html"><span><i class="fas fa-dog"></i>&nbsp;zurück zu Kurse</span></a>
+    <h1>Welpenförderung</h1>
+
+
+    <article class="welpen-article">
+
+      <div class="welpen-flex">
+        <p>
+          Für die Hundekinder ist die Welt gross und spannend, bisweilen aber auch bedrohlich. Um so viel wie möglich
+          positive Erfahrungen machen zu können, brauchen sie zu ihrem Menschen eine sichere, vertrauensvolle Bindung.
+          <br><br>
+          In unserer Welpenförderung möchten wir Sie gerne ein Stück weit auf diesem spannenden Weg begleiten. Wir legen
+          Wert auf kleine Gruppen, damit wir jedes Team individuell so gut wie möglich unterstützen können.
+          Ein paar Themen der Welpenförderung sind:
+          <br><br>
+          • Bindung<br>
+          • Kommunikation und Körpersprache der Welpen – wann entsteht Überforderung?<br>
+          • Rückruf und erste «Welpen-Basics»<br>
+          • Umgang mit Artgenossen<br>
+          • Entspannung<br>
+          • Verschiedene Strukturen entdecken
+
+        </p>
+
+        <div class="slider-welpen">
+          <div id="slider-start">
+            <figure>
+              <img src="material/img/slider-welpen/slide-1.jpg"
+                alt="Two goldenretriever babys standing in a flower field, looking cute">
+              <img src="material/img/slider-welpen/slide-2.jpg" alt="Baby dog in a white cup with red dots">
+              <img src="material/img/slider-welpen/slide-3.jpg" alt="Cute baby dog winking in the camera">
+              <img src="material/img/slider-welpen/slide-1.jpg"
+                alt="Two goldenretriever babys standing in a flower field, looking cute">
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+
+
+
+  </section>
+  <!--   form section start-->
+
+  <section class="forms">
+    <form>
+      <h2>Anmeldung Mensch</h2>
+
+      <label for="course-day">Kurstag</label>
+      <input type="date" id="course-day" required>
+      <div class="two-on-one">
+        <div class="label-line first-in-line">
+          <label for="first-name">Vorname</label>
+          <input type="text" id="first-name" required>
+        </div>
+        <div class="label-line">
+          <label for="last-name">Nachname</label>
+          <input type="text" id="last-name" required>
+        </div>
+      </div>
+      <label for="email">Email Adresse</label>
+      <input type="email" id="email">
+
+      <label for="phone">Telefon</label>
+      <input type="tel" id="phone">
+
+      <div class="two-on-one">
+        <div class="label-line first-in-line">
+          <label for="street">Strasse</label>
+          <input type="text" id="street">
+        </div>
+        <div class="label-line">
+          <label for="streetnr">Nr</label>
+          <input type="number" id="streetnr">
+        </div>
+      </div>
+
+      <div class="two-on-one">
+        <div class="label-line first-in-line">
+          <label for="plz">Postleitzahl</label>
+          <input type="number" min="0" maxlength="4" id="plz">
+        </div>
+        <div class="label-line">
+          <label for="city">Ort</label>
+          <input type="text" id="city">
+        </div>
+      </div>
+
+
+
+      <label class="custom-file-upload" for="data-upload">Kopie Ausweis</label>
+      <input type="file" accept="image/*,.pdf" id="data-upload">
+
+      <button type="submit" class="cta cta-form cta-form-1">ABSENDEN</button>
+
+
+
+    </form>
+
+
+    <form>
+      <h2>Anmeldung Hund</h2>
+
+      <label for="dog-name">Name</label>
+      <input type="text" id="dog-name">
+
+      <label for="race">Rasse</label>
+      <input type="text" id="race" required>
+
+      <label for="date-birth">Gebburtstagsdatum</label>
+      <input type="date" min="2000-01-01" max="2021-11-31" id="date-birth" required>
+
+      <label for="chipnumber">Chipnummer</label>
+      <input type="number" id="chipnumber">
+
+      <div class="two-on-one">
+        <div class="radio-line first-in-line">
+          <label for="male">männlich&nbsp;<i class="fas fa-mars"></i></label>
+          <input type="radio" name="gender" id="male" value="male">
+        </div>
+        <div class="radio-line">
+          <label for="female">weiblich&nbsp;<i class="fas fa-venus"></i></label>
+          <input type="radio" name="gender" id="female" value="female">
+        </div>
+      </div>
+
+      <label for="health-problems">Gesundheitliche Probleme</label>
+      <textarea id="health-problems" cols="70" rows="5"></textarea>
+
+      <button type="submit" class="cta cta-form cta-form-2">ABSENDEN</button>
+
+    </form>
+  </section>
+
+
+
+
+  <div class="btt-btn position-welpen">
+    <a href="#customer-logo">back to top</a>
+  </div>
+
+
+  <!--   kurse section end-->
+
+  <!--   counter start-->
+  <figure class="counter-element-1">
+    <div class="ce-1">
+      <div class="ce-flex">
+        <i class="fas fa-graduation-cap"></i>
+        <div class="number-4"></div><i class="fas fa-graduation-cap"></i>
+      </div>
+      <p>haben bereits den Grundkurs "Welpenförderung" erfolgreich abgeschlossen</p>
+    </div>
+
+    <div class="ce-2">
+      <div class="ce-flex">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <div class="number-5"></div><i class="fas fa-chalkboard-teacher"></i>
+      </div>
+      <p>haben beschlossen weiterführende
+        Kurse zu besuchen</p>
+    </div>
+
+
+  </figure>
+  <!--   counter end-->
+
+  <!--   footer start-->
+  <footer class="footer-2">
+
+    <div class="legal-info">
+      <p>Links • Privacy • Impressum</p>
+    </div>
+
+    <div class="social-info">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+
+    <div class="copyright-info">Copyright © by Manuel Reimann</div>
+
+
+  </footer>
+
+  <!--   footer end-->
+
+</body>
+
+</html>

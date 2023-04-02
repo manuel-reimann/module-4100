@@ -1,0 +1,1097 @@
+
+/* General Definitions & Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* === Small CSS Reset === */
+*{
+  margin: 0;
+  padding: 0;
+}
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+
+:root {
+--all-font : 'Nunito', Arial, Helvetica, sans-serif;
+--pri-size : 2rem;
+--sec-size : 1.5rem;
+--thi-size : 1.3rem;
+--fou-size : 1rem;
+--pri-color : #6e0d25;
+--sec-color : #ffffb3;
+--thi-color : #dcab6b;
+--fou-color : #774e24;
+--fif-color : #6a381f;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family:var(--all-font);
+
+}
+h1 {
+  font-size: var(--pri-size);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6e0d25;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #dcab6b;
+}
+
+.isdisabled {
+  color: currentColor;
+  pointer-events: none;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Start Page start */
+
+body {
+
+font-family: var(--all-font);
+color: var(--pri-color);
+
+
+}
+
+/* Navigation */
+
+#customer-logo img {
+
+  height: 10vh;
+  padding: 0 5rem 0 5rem;
+  
+  }
+
+
+header {
+
+width: 100%;  
+
+}
+nav ul {
+  list-style: none;
+  font-size: var(--sec-size);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  
+
+}
+
+nav > ul > li {
+
+  padding: 0.3rem 1.2rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+nav > ul > li:nth-child(5) {
+  margin-left: auto;
+}
+
+.language span {
+
+  display: -webkit-box;
+
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  align-items: flex-end;
+}
+
+.userprofile  {
+
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  background: url(material/img/stock/profilimage-small.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+
+nav a {
+
+  display: block;
+  text-decoration: none;
+  color: var(--pri-color);
+  position: relative;
+
+}
+
+nav a:hover:before{
+
+  content:"";
+  width: 100%;
+  height: 3px;
+  background: var(--pri-color);
+  position: absolute;
+  top: 95%;
+  left: 0;
+  border-radius: 5px;
+  
+
+}
+
+
+nav > ul > li > p {
+
+font-size: var(--fou-size);
+
+}
+
+
+/* counter element */
+
+.counter-element-1 {
+
+  background: var(--pri-color);
+  color: white;
+  width: 100%;
+  height: 20vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.ce-flex {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  font-size: var(--pri-size);
+  padding: 0.5rem;
+}
+
+.ce-1, .ce-2, .ce-3 {
+margin: 0 3rem 0 3rem;
+
+}
+
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+
+
+.number-1 {
+  -webkit-animation: counter 3s forwards alternate ease-out;
+          animation: counter 3s forwards alternate ease-out;
+  counter-reset: num var(--num);
+  
+}
+
+.number-1::after {
+  content: counter(num);
+}
+
+@-webkit-keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 49;
+  }
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 49;
+  }
+}
+
+.number-2 {
+  -webkit-animation: counter-2 5s forwards alternate ease-out;
+          animation: counter-2 5s forwards alternate ease-out;
+  counter-reset: num var(--num);
+  
+}
+
+.number-2::after {
+  content: counter(num);
+}
+
+@-webkit-keyframes counter-2 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 36;
+  }
+}
+
+@keyframes counter-2 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 36;
+  }
+}
+
+.number-3 {
+  -webkit-animation: counter-3 7s forwards alternate ease-out;
+          animation: counter-3 7s forwards alternate ease-out;
+  counter-reset: num var(--num);
+  
+}
+
+.number-3::after {
+  content: counter(num);
+}
+
+@-webkit-keyframes counter-3 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 67;
+  }
+}
+
+@keyframes counter-3 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 67;
+  }
+}
+
+
+/* news section start */
+
+.news-section {
+height: 135vh;
+
+}
+
+ 
+
+section > h1 {
+
+display: -webkit-box;
+
+display: flex; 
+-webkit-box-align: center; 
+        align-items: center; 
+-webkit-box-pack: center; 
+        justify-content: center;
+margin: 2rem 0;
+
+}
+
+.news-row {
+
+  display: -webkit-box;
+
+  display: flex; 
+  -webkit-box-align: center; 
+          align-items: center; 
+  -webkit-box-pack: space-evenly; 
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+
+}
+
+article {
+
+display: -webkit-box;
+
+display: flex;
+-webkit-box-align: center;
+        align-items: center;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+        flex-direction: column;
+margin: 0 0 4rem 0;
+}
+
+article > img {
+
+border-radius: 2rem;
+
+}
+
+
+/* Das würde die Titel richtig positionieren, aber nur auf meiner Screensize, deshalb hab ich es auskommentiert. */
+/* article:first-of-type > h2 {
+
+  position: relative;
+  right: 8vw;
+  top: -6vh; 
+}
+
+article:last-of-type > h2 {
+
+  position: relative;
+  right: 6vw;
+  top: -6vh; 
+}
+ */
+
+
+
+
+.cta {
+  background-color: var(--pri-color);
+  padding: 1rem;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+} 
+
+.cta-start {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: relative;
+  left: 30%;
+}
+
+.cta-start:hover {
+
+  transform: scale(1.1) translateY(-50%);
+  -webkit-transform: scale(1.1) translateY(-50%);
+  -ms-transform: scale(1.1) translateY(-50%);
+
+}
+
+/* back to top start*/
+.btt-btn {
+ 
+  display: -webkit-box;
+ 
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+          align-items: center;
+  margin: 10rem 10rem;
+  
+
+}
+
+.btt-btn > a {
+  color: var(--pri-color);
+  text-decoration: none;
+
+}
+
+.btt-btn > a:hover{
+
+  font-weight: bold;
+
+}
+
+
+/* slider start */
+
+#slider-start  {
+  overflow: hidden;
+
+  
+}
+
+#slider-start figure {
+  
+  width: 400%;
+  margin: 0;
+  position: relative; 
+  left: 0; 
+  -webkit-animation: 20s slider infinite; 
+          animation: 20s slider infinite;
+
+
+}
+
+#slider-start figure img {
+width: 25%; 
+float: left;
+
+}
+
+@-webkit-keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -300%;
+	}
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -300%;
+	}
+}
+
+
+/* footer start */
+
+footer {
+
+width: 100%;
+background: var(--pri-color);
+color: white;
+height: 12vh;
+font-size: var(--thi-size);
+display: -webkit-box;
+display: flex;
+-webkit-box-align: center;
+        align-items: center;
+-webkit-box-pack: space-evenly;
+        justify-content: space-evenly;
+
+}
+
+.social-info > i {
+padding: 0 0.7rem;
+cursor: pointer;
+}
+
+.social-info > i:hover {
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  
+  }
+ 
+
+/* footer start */
+
+/* Start Page end */
+
+
+/* Kurse Page start */
+
+header > hr {
+
+  width: 100%;
+  background: var(--thi-color);
+  height: 0.15rem;
+  border: none;
+
+}
+
+
+.kurse-section {
+
+  height: 194vh;
+
+}
+.kurs > img {
+
+  border-radius: 2rem 2rem 0 0;
+  border: solid 6px var(--thi-color);
+  max-width: 30vw;
+}
+
+.kurse-row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  
+}
+
+.kurse-border > h2 {
+
+  padding: 1rem 0 0.5rem 1rem;
+  max-width: 29vw;
+}
+
+.kurse-border > p {
+
+  padding: 0 1rem;
+  font-size: var(--fou-size);
+  max-width: 29vw;
+  
+}
+.kurse-border > hr {
+
+  background: var(--pri-color);
+  width: 60%;
+  height: 2px;
+  margin: 1rem 6rem;
+  border: none;
+  border-radius: 5px;
+  
+
+}
+
+
+.kurse-border {
+  border-radius: 0 0 2rem 2rem;
+  border: solid 6px var(--thi-color);
+  width: 100%;
+  border-top: none;
+  
+}
+
+.kursinfo {
+  font-size: var(--thi-size) !important;
+  
+}
+
+.kursinfo > i {
+  padding: 0 1rem 0 0;
+}
+
+.red {
+  color: #d91717;
+
+}
+
+.green {
+  color: green;
+
+}
+.forbidden {
+
+  cursor: not-allowed;
+}
+
+.cta-kurse {
+  
+  position: relative;
+  left: 40%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  
+}
+
+.cta-kurse:hover {
+
+  transform: scale(1.1) translateY(50%);
+  -webkit-transform: scale(1.1) translateY(50%);
+  -ms-transform: scale(1.1) translateY(50%);
+
+}
+
+
+
+.footer-2 {
+
+  background: var(--fou-color);
+
+}
+
+
+
+
+/* Welpenfoerderung start */
+
+.welpen-section {
+
+  height: 100vh;
+
+}
+.welpen-section > a {
+
+  text-decoration: none;
+  color: var(--pri-color);
+  font-size: var(--thi-size);
+
+  position: relative;
+  top: 4.5rem;
+  left: 6rem;
+
+}
+
+.welpen-section > a:hover {
+
+  font-weight: bold;
+
+}
+
+.welpen-flex {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  margin: 3rem;
+
+}
+
+.welpen-flex > p {
+  padding: 0 3rem 0 3rem;
+  font-size: var(--thi-size);
+}
+
+.slider-welpen {
+
+  height: 20%;
+ 
+}
+
+
+
+
+/* form definitions */
+form {
+
+  background: white;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  padding: 2rem;
+  border: 6px solid var(--thi-color);
+  border-radius: 2rem;
+  /* max-height: 75vh; */
+  width: 45vw;
+}
+label {
+  font-size: var(--thi-size);
+  padding: 0.2rem 0 0.3rem 0;
+
+}
+input {
+
+background: var(--thi-color);
+border: none;
+color: black;
+font-size: var(--fou-size);
+width: 100%;
+
+}
+
+input:focus {
+  outline: 1px solid var(--thi-color);
+  color: var(--pri-color);
+  background: white;
+  
+
+}
+
+.forms {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+
+}
+
+.two-on-one {
+
+display: -webkit-box;
+display: flex;
+flex-direction: row;
+-webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+        
+
+
+}
+
+.label-line {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  
+  }
+
+.first-in-line {
+  padding: 0 3rem 0 0;
+
+}
+
+
+#first-name, #street, #plz {
+  width: 115%;
+
+}
+#last-name, #city {
+  width: 152%;
+
+}
+
+#streetnr {
+  width: 30%;
+
+}
+
+
+
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 2px solid var(--thi-color);
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.custom-file-upload:hover {
+  background: var(--pri-color);
+  color: white;
+  border: 2px solid white;
+}
+
+#male, #female {
+  outline: none;
+
+}
+
+input[type="radio"] {
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 4px;
+  margin: 0.4rem 0.5rem 0 0;
+  background-clip: content-box;
+  border: none;
+  background-color: var(--thi-color);
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--pri-color);
+}
+
+.radio-line {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+  padding: 2rem 4rem 2rem 0;
+  
+  }
+
+  #health-problems {
+    outline: solid 2px var(--thi-color);
+    border: none;
+
+  }
+
+.cta-form {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: relative;
+
+}
+
+.cta-form-1 {
+  left: 35%;
+  bottom: -23%;
+
+}
+.cta-form-2 {
+  left: 35%;
+  bottom: -16%;
+
+}
+
+.cta-form:hover {
+
+  transform: scale(1.1) translateY(-50%);
+  -webkit-transform: scale(1.1) translateY(-50%);
+  -ms-transform: scale(1.1) translateY(-50%);
+
+}
+
+/* form definitions end */
+
+.position-welpen {
+
+  margin: 10rem 5rem 0 0;
+}
+
+/* added a delay to fake a scroll into view observer effect */
+.number-4 {
+  -webkit-animation: counter-4 3s forwards alternate ease-out;
+          animation: counter-4 3s forwards alternate ease-out;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+  counter-reset: num var(--num);
+  
+}
+
+
+.number-4::after {
+  content: counter(num);
+}
+
+@keyframes counter-4 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 24;
+  }
+}
+
+
+@-webkit-keyframes counter-4 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 24;
+  }
+}
+.number-5 {
+  -webkit-animation: counter-5 3s forwards alternate ease-out;
+          animation: counter-5 3s forwards alternate ease-out;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+  counter-reset: num var(--num);
+  
+}
+
+
+.number-5::after {
+  content: counter(num);
+}
+
+@keyframes counter-5 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 17;
+  }
+}
+
+@-webkit-keyframes counter-5 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 17;
+  }
+}
+/* about page start */
+
+.hero-image img {
+  width: 100%;
+
+}
+
+
+
+.kontakt-border > p {
+
+  padding: 0.5rem 0 0 2rem;
+  font-size: var(--sec-size);
+}
+
+
+.kontakt-border > span {
+
+  padding: 0.5rem 0 0 2rem;
+  font-size: var(--fou-size);
+  max-width: 29vw;
+}
+
+.cta-kontakt {
+  
+  position: relative;
+  left: 65%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+ 
+}
+.cta-kontakt:hover {
+
+  transform: scale(1.1) translateY(50%);
+  -webkit-transform: scale(1.1) translateY(50%);
+  -ms-transform: scale(1.1) translateY(50%);
+
+}
+
+
+.weg-section {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  margin: 5rem 0 0 0;
+}
+
+.weg-article {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  
+
+}
+
+.weg-text {
+  padding: 0 3rem 0 3rem;
+  font-size: var(--thi-size);
+  max-width: 75vh;
+}
+.weg-text span {
+  font-size: var(--thi-size);
+  font-weight: bold;
+
+}
+
+
+section > iframe {
+
+  border-radius: 2rem;
+
+}
+
+.btt-position-about {
+
+    margin: 10rem 5rem 0 0;
+
+}
+
+.zitat {
+
+  background: var(--pri-color);
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  
+
+}
+
+.zitat > span {
+  color: white;
+  font-size: var(--sec-size);
+  padding: 3rem 20rem 3rem 20rem;
+  text-align: center;
+}
